@@ -1,16 +1,25 @@
 'use strict'
 
 /*
- * Create a `multiply` function that takes two number as arguments
+ * Create a function `multiply` that takes two number arguments
  * and returns the result of the multiplication of those two.
  * But you must do this without using the operators * or /
- * and no loops. You need to do it using recursion.
+ * and no loops, do it using recursion
  *
  * @notions Primitive and Operators, Functions, Recursion
  */
 
 // Your code :
+const  multiply = (nb, nb2) => {
+    if (nb2 === 0) {
+        return 0
 
+    } else if (nb2 > 0) {
+        return nb + multiply(nb, nb2 - 1)
+    } else {
+        return -multiply(nb, -nb2)
+    }
+}
 //* Begin of tests
 const assert = require('assert')
 

@@ -10,7 +10,37 @@
 
 // Your code :
 
-//* Begin of tests
+
+const multiply = (nb1, nb2) => 
+{
+  let compteur = 0
+  let total = 0
+
+  if (nb1 === 0 || nb2 === 0)
+  {
+    return 0
+  }
+
+  if (nb2 < 0) 
+  {
+    while (compteur > nb2) 
+    {
+      compteur--
+      total = total - nb1
+    }
+  }
+
+  else
+  {
+    while (compteur < nb2) 
+    {
+      compteur++
+      total = total + nb1
+    }
+  }
+return total
+}
+// Begin of tests
 const assert = require('assert')
 
 assert.strictEqual(typeof multiply, 'function')

@@ -3,17 +3,24 @@
 /*
  * Jaden Smith Case
  *
- * Make a `jadenCase` function that takes a string as parameter
- * and return the string with each words capitilized.
- *
- * Example : "How are you ?" -> "How Are You ?"
+ * Make a function `jadenCase` that takes a String
+ * and return capitalize each words: "How are you ?" -> "How Are You ?"
  *
  */
+const str = 'How are you ?'
+
+const splitStr = str => str.split(" ")
+const capitalize = arrOfStr => arrOfStr.map(str => str.charAt(0).toUpperCase() + str.toLowerCase().slice(1))
+const concat = str => str.join(" ")
+const jadenCase = str => concat(capitalize(splitStr(str)))
 
 
 
-//* Begin of tests
-const assert = require('assert')
+        
 
-assert.fail('You must write your own tests')
-// End of tests */
+    // Begin of tests
+    const assert = require('assert')
+    assert.strictEqual(typeof jadenCase, "function")
+    assert.strictEqual(jadenCase('How are you ?'), 'How Are You ?')
+
+    // End of tests */

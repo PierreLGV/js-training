@@ -1,13 +1,15 @@
 'use strict'
 
 /*
- * Create a `total` function that takes an array of numbers
- * and return the total
+ * Create a function `total` that takes an array on numbers
+ * and return it's total
  *
  */
 
+const total = arr => arr.reduce((total, amount) => total + amount)
 
-//* Begin of tests
+
+// Begin of tests
 const assert = require('assert')
 
 assert.strictEqual(typeof total, 'function')

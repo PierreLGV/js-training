@@ -1,11 +1,12 @@
 'use strict'
 
 /*
- * Create a `get` function that takes a key and return the corresponding value
+ * Create a get function that takes a key and return the corresponding value
  * in the sourceObject
  *
  * @notions Functions, Data-Structures, Get
  */
+
 
 // Provided code :
 const sourceObject = {
@@ -16,6 +17,9 @@ const sourceObject = {
 }
 
 // Your code :
+
+const get = para => sourceObject[para]
+
 
 //* Begin of tests
 const assert = require('assert')

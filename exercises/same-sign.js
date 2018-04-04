@@ -1,14 +1,24 @@
 'use strict'
 
 /*
- * Create the `sameSign` function that takes 2 numbers as arguments and check
+ * Create the function `sameSign` that takes 2 numbers arguments and check
  * if they both have the same sign
  *
  * @notions Functions, If-Else
  */
 
 // Your code :
-
+const sameSign = (nbA,nbB) => {
+    if (nbA > 0 && nbB> 0 ) {
+        return true
+    } else if (nbA < 0 && nbB < 0) {
+        return true
+    } else if ( nbA === 0 && nbB ===0) {
+        return true
+    } else {
+        return false
+    }
+}
 //* Begin of tests
 const assert = require('assert')
 
